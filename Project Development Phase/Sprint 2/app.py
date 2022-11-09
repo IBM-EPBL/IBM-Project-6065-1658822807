@@ -84,7 +84,7 @@ def verify():
         else:
             session['regmail'] = useremail
             otp = randint(000000, 999999)
-            msg = Message(subject='OTP', sender='hackjacks@gmail.com',
+            msg = Message(subject='OTP', sender='JobMan@gmail.com',
                           recipients=[session['regmail']])
             msg.body = "You have succesfully registered for Hire Me!\nUse the OTP given below to verify your email ID.\n\t\t" + \
                 str(otp)
@@ -94,7 +94,7 @@ def verify():
     elif ("regmail" in session):
         if request.method == 'GET':
             otp = randint(000000, 999999)
-            msg = Message(subject='OTP', sender='hackjacks@gmail.com',
+            msg = Message(subject='OTP', sender='JobMan@gmail.com',
                           recipients=[session['regmail']])
             msg.body = "You have succesfully registered for Hire Me!\nUse the OTP given below to verify your email ID.\n\t\t" + \
                 str(otp)
@@ -385,7 +385,7 @@ def forgotpass():
             if (account):
                 otp = randint(000000, 999999)
                 email = request.form['email']
-                msg = Message(subject='OTP', sender='hackjacks@gmail.com',
+                msg = Message(subject='OTP', sender='JobMan@gmail.com',
                               recipients=[email])
                 msg.body = "Forgot your password?\n\nWe received a request to reset the password for your account.Use the OTP given below to reset the password.\n\n" + \
                     str(otp)
